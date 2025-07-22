@@ -8,6 +8,8 @@ $users = $c->query("SELECT * FROM users");
 <head>
     <title>All Users</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
 </head>
 <body>
 <div class="container mt-4">
@@ -25,8 +27,14 @@ $users = $c->query("SELECT * FROM users");
                 <td><?= $row['email']; ?></td>
                 <td><?= $row['contact']; ?></td>
                 <td>
-                    <a href="edit.php?id=<?= $row['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
-                    <a href="delete.php?id=<?= $row['id']; ?>" onclick="return confirm('Delete this user?')" class="btn btn-danger btn-sm">Delete</a>
+                    <a href="edit.php?id=<?= $row['id']; ?>" class="btn btn-warning btn-sm">
+  <i class="bi bi-pencil-square"></i>
+</a>
+
+<a href="delete.php?id=<?= $row['id']; ?>" onclick="return confirm('Delete this user?')" class="btn btn-danger btn-sm">
+  <i class="bi bi-trash"></i>
+</a>
+
                 </td>
             </tr>
         <?php endwhile; ?>
