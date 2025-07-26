@@ -1,6 +1,7 @@
 <?php
 if (isset($_POST['submit'])) {
-    $conn = mysqli_connect("localhost", "root", "", "your_database");
+   $conn = mysqli_connect("localhost", "root", "", "mydb");
+
 
     $name = $_POST['name'];
     $address = $_POST['address'];

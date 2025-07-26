@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "your_database");
+$conn = mysqli_connect("localhost", "root", "", "mydb");
 
 $result = $conn->query("SELECT * FROM view_high_price");
 
