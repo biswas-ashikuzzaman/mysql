@@ -1,7 +1,8 @@
 <?php
 $c = mysqli_connect("localhost", "root", "", "my_first_db");
 
-$users = $c->query("SELECT * FROM users");
+$c->query("CALL get_all_users(' $name ', ' $email', ' $contact')");
+
 ?>
 <!DOCTYPE html>
 <html>

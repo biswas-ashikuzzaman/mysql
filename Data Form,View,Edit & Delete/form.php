@@ -3,9 +3,9 @@ $c = mysqli_connect("localhost", "root", "", "my_first_db");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name    = $_POST["name"];
-     $name    = $_POST["name"];
     $email   = $_POST["email"];
     $contact = $_POST["contact"];
+// $c->query("CALL get_all_users(' $name ', ' $email', ' $contact')");
 
     $q = "INSERT INTO users (name, email, contact) VALUES ('$name', '$email', '$contact')";
 
