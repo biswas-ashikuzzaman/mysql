@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS deleted_product_log (
 );
 
 -- Step 6: Create Procedure - Insert Manufacturer
-DELIMITER $$
+DELIMITER @@
 CREATE PROCEDURE insert_manufacturer(
     IN m_name VARCHAR(50),
     IN m_address VARCHAR(100),
@@ -41,7 +41,7 @@ CREATE PROCEDURE insert_manufacturer(
 BEGIN
     INSERT INTO manufacturer(name, address, contact_no)
     VALUES (m_name, m_address, m_contact);
-END$$
+END@@
 DELIMITER ;
 
 -- Step 7: Create Procedure - Insert Product
